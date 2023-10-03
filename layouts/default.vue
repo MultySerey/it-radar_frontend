@@ -1,9 +1,11 @@
 <template>
-    <header class="shadow-sm bg-white">
+    <header class="shadow-sm bg-blue-50">
         <nav class="container mx-auto p-4 flex justify-between">
             <ul class="flex gap-4">
                 <li>
-                    <NuxtLink to="/">IT-радар</NuxtLink>
+                    <NuxtLink to="/">
+                        <i>Логотип</i> <span>IT-радар</span>
+                    </NuxtLink>
                 </li>
                 <li>
                     <NuxtLink to="/courses">Курсы</NuxtLink>
@@ -26,6 +28,6 @@
 
 <style scoped>
 .router-link-exact-active {
-    color: #12b488;
+    @apply text-blue-700 font-bold;
 }
 </style>
