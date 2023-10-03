@@ -4,7 +4,12 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss'
   ],
-  tailwindcss:{
+  app: {
+    head: {
+      title: "IT радар"
+    }
+  },
+  tailwindcss: {
     cssPath: '~/assets/css/tailwind.css',
   }
 })

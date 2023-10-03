@@ -49,7 +49,9 @@
 </template>
 
 <script setup>
-
+useHead({
+    title: "О проекте"
+})
 </script>
 
 <style scoped></style>
