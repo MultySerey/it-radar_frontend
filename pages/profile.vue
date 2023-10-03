@@ -1,17 +1,24 @@
 <template>
     <p>Личный кабинет</p>
-    <div class="border-2 flex mx-auto">
-        <img src="" alt="Картинка профиля" class="border-2 w-60">
-        <div class="p-2 border-2 flex flex-col gap-2">
+    <div class="border-2 flex mx-auto items-center justify-center">
+        <img src="" alt="Картинка профиля" class="border-2 w-60 h-60">
+        <div class="w-120 p-2 border-2 flex flex-col gap-2">
             <p>Username</p>
-            <input type="text" class="border-2">
+            <input type="text" class="border-2 rounded-lg p-2">
             <p>Электронная почта</p>
-            <input type="text" class="border-2">
+            <input type="text" class="border-2 rounded-lg p-2" placeholder="john.doe@company.com">
             <p>Пароль</p>
-            <input type="text" class="border-2">
-            <button class="w-fit bg-red-500 hover:bg-red-700 text-white font-bold mt-8 py-2 px-4 rounded">
-                Удалить аккаунт
-            </button>
+            <input type="text" class="border-2 rounded-lg p-2" placeholder="********">
+            <div class="flex gap-4">
+                <button
+                    class="w-fit bg-transparent hover:bg-blue-700 text-blue-500 hover:text-white border-2 border-blue-500 hover:border-white font-bold mt-8 py-2 px-4 rounded-lg">
+                    Обновить данные
+                </button>
+                <button
+                    class="w-fit bg-transparent hover:bg-red-700 text-red-500 hover:text-white border-2 border-red-500 hover:border-white font-bold mt-8 py-2 px-4 rounded-lg">
+                    Удалить аккаунт
+                </button>
+            </div>
         </div>
     </div>
 </template>
