@@ -1,18 +1,7 @@
 <template>
-    <header class="shadow-sm bg-white">
-        <nav class="container mx-auto p-4 flex justify-between">
-            <ul class="flex gap-4">
-                <NuxtLink to="/">IT-радар</NuxtLink>
-                <li><span>Курсы</span></li>
-                <li><span>Поиск</span></li>
-            </ul>
-            <span>Личный кабинет</span>
-        </nav>
-    </header>
-    <p>home page</p>
-    <div class="mx-auto p-4 grid grid-cols-3 gap-4">
-        <div v-for="c in 10">
-            c
+    <div class="mx-20 my-5 p-4 grid grid-cols-3 gap-5 border-2">
+        <div v-for="c in 10" class="shadow-xl p-2">
+            Компания {{ c }}
         </div>
     </div>
 </template>
@@ -21,4 +10,8 @@
 
 </script>
 
-<style scoped></style>
+<style scoped>
+    .router-link-exact-active {
+        color: #12b488;
+    }
+</style>
