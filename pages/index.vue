@@ -1,6 +1,6 @@
 <template>
-    <div class="">
-        <h1>Добро пожаловать</h1>
+    <div class="prose text-center w-auto max-w-none">
+        <h1>Заглавная страница</h1>
     </div>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
-    <div>
-        Страница поиска
+    <div class="text-5xl text-center">
+        Тут будет поиск
     </div>
 </template>
 
