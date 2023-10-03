@@ -8,12 +8,12 @@
             <NiceInput text="Пароль" placeholder="********" />
             <div class="flex gap-4">
                 <button
-                    class="w-fit bg-transparent hover:bg-blue-700 text-blue-500 hover:text-white border-2 border-blue-500 hover:border-white font-bold mt-8 py-2 px-4 rounded-lg">
-                    Обновить данные
+                    class="btn hover:bg-blue-700 text-blue-500 hover:text-white border-2 border-blue-500 hover:border-transparent mt-8">
+                    <span>Обновить данные</span>
                 </button>
                 <button
-                    class="w-fit bg-transparent hover:bg-red-700 text-red-500 hover:text-white border-2 border-red-500 hover:border-white font-bold mt-8 py-2 px-4 rounded-lg">
-                    Удалить аккаунт
+                    class="w-fit bg-transparent hover:bg-red-700 text-red-500 hover:text-white border-2 border-red-500 hover:border-transparent font-bold mt-8 py-2 px-4 rounded-lg">
+                    <span>Удалить аккаунт</span>
                 </button>
             </div>
         </div>

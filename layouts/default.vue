@@ -9,7 +9,7 @@
                     <NuxtLink to="/test">Курсы</NuxtLink>
                 </li>
                 <li>
-                    <NuxtLink>Поиск</NuxtLink>
+                    <NuxtLink to="/search">Поиск</NuxtLink>
                 </li>
             </ul>
             <NuxtLink to="/profile">Личный кабинет</NuxtLink>
@@ -24,6 +24,8 @@
 
 </script>
 
-<style scoped>.router-link-exact-active {
+<style scoped>
+.router-link-exact-active {
     color: #12b488;
-}</style>
+}
+</style>
