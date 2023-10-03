@@ -9,7 +9,7 @@
         }
     ]
     </code>
-    <div class="m-auto my-4 p-4 flex flex-wrap gap-4 border-2 w-fit">
+    <div class="m-auto my-4 p-4 flex flex-wrap gap-4 w-fit">
         <div v-for="company in test_json">
             <CompanyCard :company="company" />
         </div>
