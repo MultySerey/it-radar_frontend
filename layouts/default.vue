@@ -2,11 +2,11 @@
     <header class="shadow-sm bg-white">
         <nav class="container mx-auto p-4 flex justify-between">
             <ul class="flex gap-4">
-                <NuxtLink to="/">IT-радар</NuxtLink>
-                <li><span>Курсы</span></li>
-                <li><span>Поиск</span></li>
+                <li><NuxtLink to="/">IT-радар</NuxtLink></li>
+                <li><NuxtLink to="/test">Курсы</NuxtLink></li>
+                <li><NuxtLink>Поиск</NuxtLink></li>
             </ul>
-            <span>Личный кабинет</span>
+            <NuxtLink to="/profile">Личный кабинет</NuxtLink>
         </nav>
     </header>
     <div>
@@ -15,4 +15,7 @@
 </template>
 
 <style scoped>
+.router-link-exact-active {
+    color: #12b488;
+}
 </style>
