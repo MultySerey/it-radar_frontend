@@ -1,7 +1,7 @@
 <template>
     <p>Личный кабинет</p>
     <div class="border-2 flex mx-auto items-center justify-center">
-        <img src="" alt="Картинка профиля" class="border-2 w-60 h-60">
+        <img src="" alt="Картинка профиля" class="border-2 w-60 h-80 rounded-lg">
         <div class="w-120 p-2 border-2 flex flex-col gap-2">
             <NiceInput text="Имя" placeholder="Иван Иванов" />
             <NiceInput text="Электронная почта" placeholder="Ivan.Ivanov@company.com" />

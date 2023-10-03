@@ -6,7 +6,7 @@
                     <NuxtLink to="/">IT-радар</NuxtLink>
                 </li>
                 <li>
-                    <NuxtLink to="/test">Курсы</NuxtLink>
+                    <NuxtLink to="/courses">Курсы</NuxtLink>
                 </li>
                 <li>
                     <NuxtLink to="/search">Поиск</NuxtLink>
