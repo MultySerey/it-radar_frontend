@@ -12,7 +12,7 @@
                     <span>Обновить данные</span>
                 </button>
                 <button
-                    class="w-fit bg-transparent hover:bg-red-700 text-red-500 hover:text-white border-2 border-red-500 hover:border-transparent font-bold mt-8 py-2 px-4 rounded-lg">
+                    class="btn hover:bg-red-700 text-red-500 hover:text-white border-2 border-red-500 hover:border-transparent mt-8">
                     <span>Удалить аккаунт</span>
                 </button>
             </div>
