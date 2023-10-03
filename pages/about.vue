@@ -1,7 +1,7 @@
 <template>
     <div class="bg-slate-100 prose w-auto max-w-none px-32 py-16 flex flex-col gap-8">
         <h1>О проекте</h1>
-        <div class="bg-white px-8 pb-4 shadow-xl">
+        <div class="about-block">
             <h2>Отзывус</h2>
             <p> Создан инициативными студентами Тюменского государственного университета, чтобы помочь обучающимся
                 осознаннее
@@ -21,29 +21,28 @@
                     пользователи могли доверять нам.</li>
             </ol>
         </div>
-        <div class="bg-white px-8 pb-4 shadow-xl">
+        <div class="about-block">
             <h2>Наша команда</h2>
             <div class="mx-2 px-2 flex gap-4 justify-around">
                 <div>
-                    <img class="rounded-full border-2 aspect-square" src="" alt="Фото студента">
+                    <img class="student-photo" src="" alt="Фото студента">
                     <p>Фамилия Имя Отчество</p>
                 </div>
                 <div>
-                    <img class="rounded-full border-2 aspect-square" src="" alt="Фото студента">
+                    <img class="student-photo" src="" alt="Фото студента">
                     <p>Фамилия Имя Отчество</p>
                 </div>
                 <div>
-                    <img class="rounded-full border-2 aspect-square" src="" alt="Фото студента">
+                    <img class="student-photo" src="" alt="Фото студента">
                     <p>Фамилия Имя Отчество</p>
                 </div>
                 <div>
-                    <img class="rounded-full border-2 aspect-square" src="" alt="Фото студента">
+                    <img class="student-photo" src="" alt="Фото студента">
                     <p>Фамилия Имя Отчество</p>
                 </div>
             </div>
             <p class="text-center">Студенты бакалавриата Математическое обеспечение и администрирование информационных
-                систем, 2021 год
-                поступления</p>
+                систем, 2021 год поступления</p>
         </div>
     </div>
 </template>
@@ -54,4 +53,12 @@ useHead({
 })
 </script>
 
-<style scoped></style>
+<style scoped>
+.about-block {
+    @apply bg-white px-8 pb-4 shadow-lg;
+}
+
+.student-photo {
+    @apply rounded-full border-2 aspect-square text-center overflow-hidden font-bold;
+}
+</style>
