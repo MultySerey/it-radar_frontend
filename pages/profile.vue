@@ -18,7 +18,7 @@
             </div>
         </div>
     </div>
-    <h2 class="text-center">Ваши отзывы</h2>
+    <h2 class="text-center">Мои отзывы</h2>
     <div>тут делаем запрос в БД по всем отзывам пользователя</div>
 </template>
 

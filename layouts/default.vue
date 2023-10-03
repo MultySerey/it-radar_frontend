@@ -1,7 +1,7 @@
 <template>
-    <header class="shadow-sm bg-blue-50">
-        <nav class="container mx-auto p-4 flex justify-between">
-            <ul class="flex gap-4">
+    <header class="shadow-sm bg-blue-200">
+        <nav class="container mx-auto p-8 flex justify-between">
+            <ul class="flex gap-8">
                 <li>
                     <NuxtLink to="/">
                         <i>Логотип</i> <span>IT-радар</span>
@@ -13,6 +13,9 @@
                 <li>
                     <NuxtLink to="/search">Поиск</NuxtLink>
                 </li>
+                <li>
+                    <NuxtLink to="/about">О проекте</NuxtLink>
+                </li>
             </ul>
             <NuxtLink to="/profile">Личный кабинет</NuxtLink>
         </nav>
@@ -20,6 +23,16 @@
     <div>
         <slot />
     </div>
+    <footer class="bg-blue-200 flex justify-around p-8">
+        <div>
+            <p>© 2023 MultySerey,</p>
+            <p>ООО "Моя оборона". Все права защищены.</p>
+        </div>
+        <div>
+            <p>Политика кон­фи­ден­ци­аль­но­сти</p>
+            <p>Оценить работу сервиса</p>
+        </div>
+    </footer>
 </template>
 
 <script setup>
