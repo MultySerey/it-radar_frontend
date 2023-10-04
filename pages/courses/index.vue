@@ -1,14 +1,5 @@
 <template>
-    здесь кидаем запрос в БД на платформы онлайн-курсов
-    <code>
-    [
-        {
-            "id": 0,
-            "name": "GeekBox",
-            "img_link": "ссылка на логотип"
-        }
-    ]
-    </code>
+    <p>здесь кидаем запрос в БД на платформы онлайн-курсов</p>
     <div class="m-auto my-4 p-4 flex flex-wrap gap-4 w-fit">
         <div v-for="company in test_json">
             <CompanyCard :company="company" />

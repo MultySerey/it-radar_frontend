@@ -1,6 +1,6 @@
 <template>
     <h1 class="text-center">Ваш профиль</h1>
-    <div class="border-2 flex mx-auto items-center justify-center gap-4 p-2 w-fit">
+    <div class="shadow-lg flex mx-auto items-center justify-center gap-4 p-2 w-fit">
         <img src="" alt="Картинка профиля" class="border-2 w-60 h-80 rounded-lg">
         <div class="w-120 p-2 flex flex-col gap-2">
             <NiceInput text="Имя" placeholder="Иван Иванов" />
