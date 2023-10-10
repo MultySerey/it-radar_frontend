@@ -17,7 +17,7 @@
                     <NuxtLink to="/about">О проекте</NuxtLink>
                 </li>
             </ul>
-            <NuxtLink to="/profile">Личный кабинет</NuxtLink>
+            <NuxtLink to="/user_page">Личный кабинет</NuxtLink>
         </nav>
     </header>
     <div>
