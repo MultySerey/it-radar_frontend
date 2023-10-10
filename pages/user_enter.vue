@@ -1,7 +1,6 @@
 <template>
     <div class="bg-slate-50 flex justify-evenly">
         <div class="my-container">
-            <h1>Зарегистрироваться</h1>
             <div class="flex-col-gap">
                 <NicerInput text="Электронная почта" placeholder="Ivan.Ivanov@example.com" />
                 <NicerInput text="Пароль" placeholder="********" />
@@ -9,7 +8,6 @@
             <NicerButton text="Зарегистрироваться" color="blue" />
         </div>
         <div class="my-container">
-            <h1>Войти</h1>
             <div class="flex-col-gap">
                 <NicerInput text="Электронная почта" placeholder="Ivan.Ivanov@example.com" />
                 <NicerInput text="Пароль" placeholder="********" />
