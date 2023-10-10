@@ -1,7 +1,7 @@
 <template>
     <h1 class="text-center">Ваш профиль</h1>
-    <div class="shadow-lg flex mx-auto items-center justify-center gap-4 p-2 w-fit">
-        <img src="" alt="Картинка профиля" class="border-2 w-60 h-80 rounded-lg">
+    <div class="shadow-lg flex mx-auto items-center justify-center gap-4 px-8 py-4 w-fit">
+        <img src="" alt="Картинка профиля" class="border-2 w-60 h-60 rounded-full overflow-hidden">
         <div class="w-120 p-2 flex flex-col gap-2">
             <NicerInput text="Имя" placeholder="Иван Иванов" />
             <NicerInput text="Электронная почта" placeholder="Ivan.Ivanov@example.com" />
