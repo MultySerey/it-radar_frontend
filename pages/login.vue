@@ -5,19 +5,14 @@
                 <NicerInput text="Электронная почта" placeholder="Ivan.Ivanov@example.com" />
                 <NicerInput text="Пароль" placeholder="********" />
             </div>
-            <NicerButton text="Зарегистрироваться" color="blue" />
-        </div>
-        <div class="my-container">
-            <div class="flex-col-gap">
-                <NicerInput text="Электронная почта" placeholder="Ivan.Ivanov@example.com" />
-                <NicerInput text="Пароль" placeholder="********" />
-            </div>
             <NicerButton text="Войти" color="blue" />
         </div>
     </div>
 </template>
 
-<script></script>
+<script setup>
+    
+</script>
 
 <style scoped>
 h1{
