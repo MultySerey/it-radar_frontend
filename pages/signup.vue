@@ -5,22 +5,22 @@
                 <div class="flex-col-gap">
                     <div class="flex flex-col gap-2">
                         <label for="firstName">Имя</label>
-                        <input id="firstName" type="firstName" v-model="formData.firstName" class="border-2 rounded-lg p-2"
-                            placeholder="Ivan.Ivanov@example.com">
+                        <input id="firstName" type="firstName" v-model="request.firstName" class="border-2 rounded-lg p-2"
+                            placeholder="Иван">
                     </div>
                     <div class="flex flex-col gap-2">
                         <label for="lastName">Фамилия</label>
-                        <input id="lastName" type="lastName" v-model="formData.lastName" class="border-2 rounded-lg p-2"
-                            placeholder="********">
+                        <input id="lastName" type="text" v-model="request.lastName" class="border-2 rounded-lg p-2"
+                            placeholder="Иванов">
                     </div>
                     <div class="flex flex-col gap-2">
                         <label for="email">Электронная почта</label>
-                        <input id="email" type="email" v-model="formData.email" class="border-2 rounded-lg p-2"
+                        <input id="email" type="email" v-model="request.email" class="border-2 rounded-lg p-2"
                             placeholder="Ivan.Ivanov@example.com">
                     </div>
                     <div class="flex flex-col gap-2">
                         <label for="password">Пароль</label>
-                        <input id="password" type="password" v-model="formData.password" class="border-2 rounded-lg p-2"
+                        <input id="password" type="password" v-model="request.password" class="border-2 rounded-lg p-2"
                             placeholder="********">
                     </div>
                 </div>
@@ -36,7 +36,27 @@
 </template>
 
 <script setup>
-console.log('a')
+import { ref } from 'vue';
+
+const request = ref({
+    firstName:'',
+    lastName:'',
+    email: '',
+    password: '',
+})
+
+const submitForm = async () => {
+    const { data: response } = await useFetch('http://localhost:5000/api/auth/signup', {
+        method: 'post',
+        body: {
+            firstName: request.value.firstName,
+            lastName: request.value.lastName,
+            email: request.value.email,
+            password: request.value.password,
+        }
+    })
+    console.log(response)
+}
 </script>
 
 <style scoped>

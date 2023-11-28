@@ -5,12 +5,12 @@
                 <div class="flex-col-gap">
                     <div class="flex flex-col gap-2">
                         <label for="email">Электронная почта</label>
-                        <input id="email" type="email" v-model="formData.email" class="border-2 rounded-lg p-2"
+                        <input id="email" type="email" v-model="request.email" class="border-2 rounded-lg p-2"
                             placeholder="Ivan.Ivanov@example.com">
                     </div>
                     <div class="flex flex-col gap-2">
                         <label for="password">Пароль</label>
-                        <input id="password" type="password" v-model="formData.password" class="border-2 rounded-lg p-2"
+                        <input id="password" type="password" v-model="request.password" class="border-2 rounded-lg p-2"
                             placeholder="********">
                     </div>
                 </div>
@@ -28,7 +28,7 @@
 <script setup>
 import { ref } from 'vue';
 
-const formData = ref({
+const request = ref({
     email: '',
     password: '',
 })
@@ -37,8 +37,8 @@ const submitForm = async () => {
     const { data: response } = await useFetch('https://localhost:5000/api/auth/login', {
         method: 'post',
         body: {
-            email: formData.value.email,
-            password: formData.value.password,
+            email: request.value.email,
+            password: request.value.password,
         }
     })
     console.log(response)
