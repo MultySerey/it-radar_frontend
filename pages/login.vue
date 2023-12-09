@@ -24,20 +24,17 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
-
 const request = ref({
     email: '',
     password: '',
 })
 
-const submitForm = async () => {
+async function submitForm() {
     const { data: response } = await useFetch('https://localhost:5000/api/auth/login', {
-        method: 'post',
-        body: {
-            email: request.value.email,
-            password: request.value.password,
-        }
+        credentials: "include",
+        method: 'POST',
+        body: request.value,
+        watch: false
     })
     console.log(response)
 }
