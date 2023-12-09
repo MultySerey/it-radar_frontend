@@ -29,14 +29,11 @@ const request = ref({
     password: '',
 })
 
+const auth = useAuthStore()
+
 async function submitForm() {
-    const { data: response } = await useFetch('https://localhost:5000/api/auth/login', {
-        credentials: "include",
-        method: 'POST',
-        body: request.value,
-        watch: false
-    })
-    console.log(response)
+    const { error } = await auth.login(request.value);
+    console.log(error);
 }
 </script>
 
