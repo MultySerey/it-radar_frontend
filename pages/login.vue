@@ -23,7 +23,11 @@
     </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
+definePageMeta({
+    middleware: ['guest']
+})
+
 const request = ref({
     email: '',
     password: '',
@@ -33,7 +37,6 @@ const auth = useAuthStore()
 
 async function submitForm() {
     const { error } = await auth.login(request.value);
-    console.log(error);
 }
 </script>
 

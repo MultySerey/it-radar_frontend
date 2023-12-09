@@ -16,8 +16,10 @@
     <div>тут делаем запрос в БД по всем отзывам пользователя</div>
 </template>
 
-<script setup>
-
+<script lang="ts" setup>
+definePageMeta({
+    middleware: ['user']
+})
 </script>
 
 <style scoped></style>

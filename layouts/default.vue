@@ -1,7 +1,8 @@
 <template>
+    <pre>{{ auth.token }}</pre>
     <header class="shadow-sm bg-blue-200">
         <nav class="container mx-auto p-8 flex justify-between">
-            <ul class="flex gap-8">
+            <ul>
                 <li>
                     <NuxtLink to="/">
                         <i>Логотип</i> <span>IT-радар</span>
@@ -17,7 +18,22 @@
                     <NuxtLink to="/about">О проекте</NuxtLink>
                 </li>
             </ul>
-            <NuxtLink to="/user_page">Личный кабинет</NuxtLink>
+            <ul v-if="auth.token">
+                <li>
+                    <NuxtLink to="/user_page">Личный кабинет</NuxtLink>
+                </li>
+                <li>
+                    <button>Выйти</button>
+                </li>
+            </ul>
+            <ul v-else>
+                <li>
+                    <NuxtLink to="/signup">Зарегистрироваться</NuxtLink>
+                </li>
+                <li>
+                    <NuxtLink to="/login">Войти</NuxtLink>
+                </li>
+            </ul>
         </nav>
     </header>
     <div>
@@ -35,12 +51,16 @@
     </footer>
 </template>
 
-<script setup>
-
+<script lang="ts" setup>
+const auth = useAuthStore();
 </script>
 
 <style scoped>
 .router-link-exact-active {
     @apply text-blue-700 font-bold;
+}
+
+ul {
+    @apply flex gap-8;
 }
 </style>
