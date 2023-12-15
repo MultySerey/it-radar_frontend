@@ -8,11 +8,17 @@
 <script setup>
 const auth = useAuthStore()
 
+const accessCookie = useCookie('accessToken')
+accessCookie.value = auth.token.accessToken
+
 const { data } = await useFetch('http://localhost:5000/api/courses', {
-    credentials: 'include'
+    credentials: 'include',
+    headers: {
+        Authorization: auth.token.accessToken
+    },
 });
 
-console.log(data)
+console.log(auth.token.accessToken)
 </script>
 
 <style scoped></style>
