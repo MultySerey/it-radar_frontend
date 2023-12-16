@@ -32,12 +32,6 @@ const request = ref({
     email: '',
     password: '',
 })
-
-const auth = useAuthStore()
-
-async function submitForm() {
-    const { error } = await auth.login(request.value);
-}
 </script>
 
 <style scoped>
