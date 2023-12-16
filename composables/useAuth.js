@@ -16,7 +16,7 @@ export default () => {
                         password
                     }
                 })
-                setToken(data.accessToken)
+                setToken(data.value.accessToken)
 
                 resolve(true)
             } catch (error) {
@@ -29,7 +29,7 @@ export default () => {
         return new Promise(async (resolve, reject) => {
             try {
                 const { data } = useFetch('http://localhost:5000/api/auth/refresh')
-                setToken(data.accessToken)
+                setToken(data.value.accessToken)
                 resolve(true)
             } catch (error) {
                 reject(error)
