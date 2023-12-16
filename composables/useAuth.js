@@ -6,18 +6,47 @@ export default () => {
         accessToken.value = newToken;
     }
 
-    const login = async ({ email, password }) => {
-        const { data } = await useFetch('http://localhost:5000/api/auth/login', {
-            method: 'post',
-            body: {
-                email,
-                password
+    const login = ({ email, password }) => {
+        return new Promise(async (resolve, reject) => {
+            try {
+                const { data } = await useFetch('http://localhost:5000/api/auth/login', {
+                    method: 'post',
+                    body: {
+                        email,
+                        password
+                    }
+                })
+                setToken(data.accessToken)
+
+                resolve(true)
+            } catch (error) {
+                reject(error)
             }
         })
-        setToken(data.accessToken);
-
-        console.log(data)
     }
 
-    return { login, useAccessToken }
+    const refreshToken = () => {
+        return new Promise(async (resolve, reject) => {
+            try {
+                const { data } = useFetch('http://localhost:5000/api/auth/refresh')
+                setToken(data.accessToken)
+                resolve(true)
+            } catch (error) {
+                reject(error)
+            }
+        })
+    }
+
+    const initAuth = () => {
+        return new Promise(async (resolve, reject) => {
+            try {
+                await refreshToken()
+                resolve(true)
+            } catch (error) {
+                reject(error)
+            }
+        })
+    }
+
+    return { login, useAccessToken, initAuth }
 }

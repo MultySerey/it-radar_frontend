@@ -51,8 +51,9 @@
     </footer>
 </template>
 
-<script lang="ts" setup>
-const auth = useAuthStore();
+<script lang="js" setup>
+const { useAccessToken } = useAuth();
+const token = useAccessToken();
 </script>
 
 <style scoped>
