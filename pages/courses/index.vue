@@ -1,24 +1,19 @@
 <template>
-    <div class="m-auto my-4 p-4 flex flex-wrap gap-4 w-fit">
-        <div v-for="course in data"
-        class="shadow-lg p-8">
-            {{ course }}
-            <NuxtLink :to="`/courses/${course.id}`">
-                <p>{{ course.name }}</p>
+    <div class="m-auto ms-16 my-8 p-8 grid grid-cols-3 gap-8 w-fit">
+        <div v-for="course in data">
+            <NuxtLink :to="`/courses/${course.id}`" class="p-4 border-4 rounded-lg flex flex-col gap-4">
+                <p class="text-3xl font-semibold">{{ course.name }}</p>
+                <p>{{ course.description }}</p>
+                <p>{{ course.price }}</p>
             </NuxtLink>
         </div>
     </div>
 </template>
 
 <script setup>
-const auth = useAuthStore()
+const { data } = await useApi('http://localhost:5000/api/courses')
 
-const { data } = await useFetch('http://localhost:5000/api/courses', {
-    credentials: 'include',
-    headers: {
-        Authorization: `Bearer ${auth.token.accessToken}`
-    },
-});
+//{ "id": 1, "name": null, "description": "Test Course Description", "price": 10000, "timeframe": 10, "rating": null }
 </script>
 
 <style scoped></style>

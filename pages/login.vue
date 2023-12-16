@@ -4,12 +4,12 @@
             <div class="flex-col-gap">
                 <div class="flex flex-col gap-2">
                     <label for="email">Электронная почта</label>
-                    <input id="email" type="email" v-model="request.email" class="border-2 rounded-lg p-2"
+                    <input id="email" type="email" v-model="form.email" class="border-2 rounded-lg p-2"
                         placeholder="Ivan.Ivanov@example.com">
                 </div>
                 <div class="flex flex-col gap-2">
                     <label for="password">Пароль</label>
-                    <input id="password" type="password" v-model="request.password" class="border-2 rounded-lg p-2"
+                    <input id="password" type="password" v-model="form.password" class="border-2 rounded-lg p-2"
                         placeholder="********">
                 </div>
             </div>
@@ -24,20 +24,18 @@
 </template>
 
 <script lang="ts" setup>
-definePageMeta({
-    middleware: ['guest']
-})
+const { login } = useAuth();
 
-const request = ref({
+const form = ref({
     email: '',
     password: '',
 })
 
-const auth = useAuthStore()
-
 async function submitForm() {
-    const { error } = await auth.login(request.value);
+    const { data } = await login(form.value)
+    console.log(data)
 }
+
 </script>
 
 <style scoped>

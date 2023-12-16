@@ -1,5 +1,5 @@
 <template>
-    <pre>{{ auth.token }}</pre>
+    <pre>{{ token }}</pre>
     <header class="shadow-sm bg-blue-200">
         <nav class="container mx-auto p-8 flex justify-between">
             <ul>
@@ -12,13 +12,10 @@
                     <NuxtLink to="/courses">Курсы</NuxtLink>
                 </li>
                 <li>
-                    <NuxtLink to="/search">Поиск</NuxtLink>
-                </li>
-                <li>
                     <NuxtLink to="/about">О проекте</NuxtLink>
                 </li>
             </ul>
-            <ul v-if="auth.token">
+            <ul v-if="token">
                 <li>
                     <NuxtLink to="/user_page">Личный кабинет</NuxtLink>
                 </li>
@@ -51,8 +48,9 @@
     </footer>
 </template>
 
-<script lang="ts" setup>
-const auth = useAuthStore();
+<script lang="js" setup>
+const { useAccessToken } = useAuth();
+const token = useAccessToken();
 </script>
 
 <style scoped>

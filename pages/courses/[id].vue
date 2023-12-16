@@ -5,17 +5,8 @@
 </template>
 
 <script setup>
-const {id} = useRoute().params
-const auth = useAuthStore()
-
-const { data } = await useFetch(`http://localhost:5000/api/courses?companyId=${id}`, {
-    credentials: 'include',
-    headers: {
-        Authorization: `Bearer ${auth.token.accessToken}`
-    },
-});
+const { id } = useRoute().params
+const { data } = await useApi(`http://localhost:5000/api/courses?companyId=${id}`)
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
