@@ -1,10 +1,14 @@
 <template>
     <div class="m-auto ms-16 my-8 p-8 grid grid-cols-3 gap-8 w-fit">
         <div v-for="course in data">
-            <NuxtLink :to="`/courses/${course.id}`" class="p-4 border-4 rounded-lg flex flex-col gap-4">
-                <p class="text-3xl font-semibold">{{ course.name }}</p>
-                <p>{{ course.description }}</p>
-                <p>{{ course.price }}</p>
+            <NuxtLink :to="`/courses/${course.id}`" class="p-4 border-4 rounded-lg flex flex-col gap-4 content-between">
+                <p>{{ course.company }}</p>
+                <p class="text-2xl font-semibold">{{ course.name }}</p>
+                <p v-if="course.description">{{ course.description }}</p>
+                <p>
+                    <span v-if="course.price">{{ course.price }} &#8381;</span>
+                    <span v-else>Цена не указана</span>
+                </p>
             </NuxtLink>
         </div>
     </div>
