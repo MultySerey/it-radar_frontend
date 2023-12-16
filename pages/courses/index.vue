@@ -1,9 +1,11 @@
 <template>
     <div class="m-auto my-4 p-4 flex flex-wrap gap-4 w-fit">
-        <div>
-            <div v-for="course in data">
-                {{ course }}
-            </div>
+        <div v-for="course in data"
+        class="shadow-lg p-8">
+            {{ course }}
+            <NuxtLink :to="`/courses/${course.id}`">
+                <p>{{ course.name }}</p>
+            </NuxtLink>
         </div>
     </div>
 </template>
