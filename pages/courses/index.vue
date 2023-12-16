@@ -9,14 +9,7 @@
 </template>
 
 <script setup>
-const auth = useAuthStore()
-
-const { data } = await useFetch('http://localhost:5000/api/courses', {
-    credentials: 'include',
-    headers: {
-        Authorization: `Bearer ${auth.token.accessToken}`
-    },
-});
+const { data } = await useApi('http://localhost:5000/api/courses')
 </script>
 
 <style scoped></style>
