@@ -3,7 +3,7 @@
         <p class="text-8xl text-center">Frontend-разработчик</p>
         <p class="text-5xl text-center">от компании SkillBrains</p>
     </div>
-    <p class="text-2xl text-center">Это общее мнение пользователей, вычисленное нашей нейросетью</p>
+    <p class="text-2xl text-center">Самое важное</p>
     <div class="m-auto ms-16 my-8 px-8 flex flex-wrap gap-8 place-content-center">
         <div>
             <p class="text-9xl aspect-square shadow-lg rounded-xl bg-green-200 p-4">4.8</p>

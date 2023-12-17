@@ -4,9 +4,7 @@
         <nav class="container mx-auto p-8 flex justify-between">
             <ul>
                 <li>
-                    <NuxtLink to="/">
-                        <i>Логотип</i> <span>IT-радар</span>
-                    </NuxtLink>
+                    <NuxtLink to="/">Главная</NuxtLink>
                 </li>
                 <li>
                     <NuxtLink to="/courses">Курсы</NuxtLink>
@@ -15,20 +13,12 @@
                     <NuxtLink to="/about">О проекте</NuxtLink>
                 </li>
             </ul>
-            <ul v-if="token">
+            <ul>
                 <li>
                     <NuxtLink to="/user_page">Личный кабинет</NuxtLink>
                 </li>
                 <li>
                     <button>Выйти</button>
-                </li>
-            </ul>
-            <ul v-else>
-                <li>
-                    <NuxtLink to="/signup">Зарегистрироваться</NuxtLink>
-                </li>
-                <li>
-                    <NuxtLink to="/login">Войти</NuxtLink>
                 </li>
             </ul>
         </nav>
@@ -42,8 +32,8 @@
             <p>Все права защищены.</p>
         </div>
         <div>
-            <p>Политика кон­фи­ден­ци­аль­но­сти</p>
-            <p>Оценить работу сервиса</p>
+            <p> </p>
+            <p> </p>
         </div>
     </footer>
 </template>
